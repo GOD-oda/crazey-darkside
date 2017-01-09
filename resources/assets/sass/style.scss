@@ -1,0 +1,91 @@
+html {
+  font-size: 62.5%;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+body {
+  background: url('/img/free5.jpeg') no-repeat fixed left bottom;
+  background-size: cover;
+}
+a {
+  color: #fff;
+}
+.status-background {
+  height: 100vh;
+  //background: linear-gradient(#3f51b5, #1a237e) fixed;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) fixed;
+  color: #fff;
+  //padding: 5px;
+}
+/*
+  メインのコンテンツ
+ */
+.main-content {
+  font-size: 4em;
+  padding: 15px !important;
+  height: 100%;
+  border: solid 3px #fff;
+
+  // カテゴリーのエリア
+  .category-box {
+
+  }
+  // 詳細のエリア
+  .detail-box {
+    overflow: hidden;
+    // 左のエリア
+    .left-area {
+      float: left;
+      width: 50%;
+      height: auto;
+      padding: 10px;
+      border-right: solid 1px #fff;
+    }
+    // 右のエリア
+    .right-area {
+      float: right;
+      width: 50%;
+      padding: 10px;
+    }
+    // プレイヤーステータスの詳細
+    .player-status-list {
+      margin: 0;
+      font-size: 0.7em;
+      text-align: right;
+      span {
+        float: left;
+        opacity: .8;
+      }
+    }
+  }
+}
+
+/*
+  左のコンテンツ
+ */
+.side-content {
+  padding: 20px !important;
+  font-size: 3em;
+  border: solid 3px #fff;
+  height: 100%;
+  ul.category-list {
+    margin: 0;
+    li {
+      margin-bottom: 10px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+    a {
+    display: block;
+    }
+  }
+}
+.avatar {
+  width: 10%;
+  object-fit: cover;
+  //border-radius: 50%;
+}
+.btn.ghost {
+  border: solid 1px #fff;
+  background: rgba(0, 0, 0, .1);
+}

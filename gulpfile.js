@@ -13,7 +13,16 @@ require('laravel-elixir-vue-2');
  |
  */
 
+require('laravel-elixir-materialize-css');
+
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.materialize()
+    .sass([
+        'style.scss'
+    ])
+    .webpack('app.js');
+
+    mix.browserSync({
+        proxy: 'localhost:8000'
+    });
 });
