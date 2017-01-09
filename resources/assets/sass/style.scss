@@ -9,6 +9,9 @@ body {
 a {
   color: #fff;
 }
+ul {
+  margin: 0;
+}
 .status-background {
   height: 100vh;
   //background: linear-gradient(#3f51b5, #1a237e) fixed;
@@ -27,16 +30,36 @@ a {
 
   // カテゴリーのエリア
   .category-box {
-
+    margin-bottom: 10px;
+    .category-name, .category-actions {
+      display: inline-block;
+    }
+    .category-name {
+      margin-right: 10px;
+    }
+    // 装備のアクション
+    .equipment-actions-list {
+      li {
+        font-size: 0.7em;
+        border: solid 1px #fff;
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
   }
   // 詳細のエリア
   .detail-box {
-    overflow: hidden;
+    li {
+      &:hover {
+       background: rgba(255, 255, 255, 0.3);
+      }
+    }
     // 左のエリア
     .left-area {
       float: left;
       width: 50%;
-      height: auto;
+      height: 500px;
       padding: 10px;
       border-right: solid 1px #fff;
     }
@@ -44,17 +67,37 @@ a {
     .right-area {
       float: right;
       width: 50%;
+      height: 500px;
       padding: 10px;
+    }
+    // 下のエリア
+    .bottom-area {
+      border: solid 1px #fff;
+      height: 200px;
     }
     // プレイヤーステータスの詳細
     .player-status-list {
-      margin: 0;
-      font-size: 0.7em;
+      font-size: 0.6em;
       text-align: right;
       span {
         float: left;
         opacity: .8;
       }
+    }
+    // 装備の詳細
+    .equipments-list {
+      font-size: 0.7em;
+    }
+    // 称号の詳細
+    .former-titles {
+      overflow: auto;
+      height: 100%;
+      font-size: 0.7em;
+    }
+    .latter-titles {
+      overflow: auto;
+      height: 100%;
+      font-size: 0.7em;
     }
   }
 }
@@ -68,7 +111,6 @@ a {
   border: solid 3px #fff;
   height: 100%;
   ul.category-list {
-    margin: 0;
     li {
       margin-bottom: 10px;
       &:hover {
@@ -88,4 +130,9 @@ a {
 .btn.ghost {
   border: solid 1px #fff;
   background: rgba(0, 0, 0, .1);
+}
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
 }

@@ -13,6 +13,10 @@ a {
   color: #fff;
 }
 
+ul {
+  margin: 0;
+}
+
 .status-background {
   height: 100vh;
   background: -webkit-linear-gradient(top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) fixed;
@@ -30,14 +34,35 @@ a {
   border: solid 3px #fff;
 }
 
-.main-content .detail-box {
-  overflow: hidden;
+.main-content .category-box {
+  margin-bottom: 10px;
+}
+
+.main-content .category-box .category-name, .main-content .category-box .category-actions {
+  display: inline-block;
+}
+
+.main-content .category-box .category-name {
+  margin-right: 10px;
+}
+
+.main-content .category-box .equipment-actions-list li {
+  font-size: 0.7em;
+  border: solid 1px #fff;
+}
+
+.main-content .category-box .equipment-actions-list li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.main-content .detail-box li:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .main-content .detail-box .left-area {
   float: left;
   width: 50%;
-  height: auto;
+  height: 500px;
   padding: 10px;
   border-right: solid 1px #fff;
 }
@@ -45,18 +70,39 @@ a {
 .main-content .detail-box .right-area {
   float: right;
   width: 50%;
+  height: 500px;
   padding: 10px;
 }
 
+.main-content .detail-box .bottom-area {
+  border: solid 1px #fff;
+  height: 200px;
+}
+
 .main-content .detail-box .player-status-list {
-  margin: 0;
-  font-size: 0.7em;
+  font-size: 0.6em;
   text-align: right;
 }
 
 .main-content .detail-box .player-status-list span {
   float: left;
   opacity: .8;
+}
+
+.main-content .detail-box .equipments-list {
+  font-size: 0.7em;
+}
+
+.main-content .detail-box .former-titles {
+  overflow: auto;
+  height: 100%;
+  font-size: 0.7em;
+}
+
+.main-content .detail-box .latter-titles {
+  overflow: auto;
+  height: 100%;
+  font-size: 0.7em;
 }
 
 /*
@@ -67,10 +113,6 @@ a {
   font-size: 3em;
   border: solid 3px #fff;
   height: 100%;
-}
-
-.side-content ul.category-list {
-  margin: 0;
 }
 
 .side-content ul.category-list li {
@@ -94,6 +136,12 @@ a {
 .btn.ghost {
   border: solid 1px #fff;
   background: rgba(0, 0, 0, 0.1);
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */

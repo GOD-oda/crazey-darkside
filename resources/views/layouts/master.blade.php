@@ -23,7 +23,11 @@
 
       <div class="col m10 main-content">
         <div class="category-box">
-          <span>{{ $category_name }}</span>
+          <div class="category-name">{{ $category_name }}</div>
+          <div class="category-actions">
+            @yield('category-actions')
+          </div>
+          <!-- @yield('category-box') -->
           <!-- <img src="" alt="" class="avatar"> -->
         </div>
         <div class="detail-box">
@@ -33,6 +37,9 @@
           <div class="right-area">
             @yield('right-area')
           </div>
+          <!-- <div class="bottom-area">
+            @yield('bottom-area')
+          </div> -->
         </div>
       </div>
     </div>
@@ -40,5 +47,10 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{{ asset('js/materialize.js') }}"></script>
+  <script>
+    $(document).ready(function() {
+      $('.modal').modal();
+    })
+  </script>
 </body>
 </html>
