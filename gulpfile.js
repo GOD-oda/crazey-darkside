@@ -16,8 +16,8 @@ require('laravel-elixir-vue-2');
 require('laravel-elixir-materialize-css');
 
 elixir(mix => {
-    mix.materialize()
-    .sass([
+    mix.materialize();
+    mix.sass([
         'style.scss'
     ])
     .webpack('app.js');

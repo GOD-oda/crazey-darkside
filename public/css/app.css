@@ -1,12 +1,14 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 html {
   font-size: 62.5%;
-  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 body {
+  font-family: "Noto Sans Japanese", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   background: url("/img/free5.jpeg") no-repeat fixed left bottom;
   background-size: cover;
+  font-weight: 200;
 }
 
 a {
@@ -17,25 +19,30 @@ ul {
   margin: 0;
 }
 
-.status-background {
+.background {
   height: 100vh;
   background: -webkit-linear-gradient(top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) fixed;
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) fixed;
   color: #fff;
+  margin-bottom: 0;
+}
+
+.divider {
+  background-color: #fff;
 }
 
 /*
-  メインのコンテンツ
+  メインコンテンツ
  */
 .main-content {
-  font-size: 4em;
-  padding: 15px !important;
-  height: 100%;
-  border: solid 3px #fff;
+  font-size: 4rem;
+  padding: 2vh !important;
+  height: 100vh;
+  border: solid 1px #fff;
 }
 
 .main-content .category-box {
-  margin-bottom: 10px;
+  height: 10%;
 }
 
 .main-content .category-box .category-name, .main-content .category-box .category-actions {
@@ -55,64 +62,106 @@ ul {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.main-content .detail-box li:hover {
-  background: rgba(255, 255, 255, 0.3);
+.main-content .detail-box {
+  height: 90%;
 }
 
-.main-content .detail-box .left-area {
-  float: left;
-  width: 50%;
-  height: 500px;
-  padding: 10px;
-  border-right: solid 1px #fff;
+.main-content .detail-box .status-area {
+  height: 100%;
 }
 
-.main-content .detail-box .right-area {
-  float: right;
-  width: 50%;
-  height: 500px;
-  padding: 10px;
-}
-
-.main-content .detail-box .bottom-area {
-  border: solid 1px #fff;
-  height: 200px;
-}
-
-.main-content .detail-box .player-status-list {
-  font-size: 0.6em;
+.main-content .detail-box .status-area .player-status-list {
+  font-size: 2.5rem;
   text-align: right;
 }
 
-.main-content .detail-box .player-status-list span {
+.main-content .detail-box .status-area .player-status-list span {
   float: left;
   opacity: .8;
 }
 
-.main-content .detail-box .equipments-list {
-  font-size: 0.7em;
+.main-content .detail-box .status-area .left-area {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  border-right: solid 1px #fff;
 }
 
-.main-content .detail-box .former-titles {
-  overflow: auto;
-  height: 100%;
-  font-size: 0.7em;
+.main-content .detail-box .status-area .right-area {
+  float: right;
+  width: 50%;
+  padding: 10px;
 }
 
-.main-content .detail-box .latter-titles {
-  overflow: auto;
+.main-content .detail-box .skills-area {
   height: 100%;
-  font-size: 0.7em;
+}
+
+.main-content .detail-box .equipment-area {
+  height: 100%;
+}
+
+.main-content .detail-box .equipment-area .equipment-list {
+  font-size: 2.5rem;
+}
+
+.main-content .detail-box .equipment-area .equipment-list li {
+  padding: 5px 0;
+}
+
+.main-content .detail-box .equipment-area .equipment-list li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.main-content .detail-box .title-area {
+  height: 100%;
+  position: relative;
+}
+
+.main-content .detail-box .title-area .title-list {
+  height: 100%;
+  overflow: auto;
+  font-size: 2rem;
+  padding: 0 10px;
+}
+
+.main-content .detail-box .title-area .title-list li {
+  padding: 5px 0;
+}
+
+.main-content .detail-box .title-area .title-list li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.main-content .detail-box .title-area .left-area {
+  width: 50%;
+  height: 80%;
+  float: left;
+  padding: 10px;
+  border-right: solid 1px #fff;
+}
+
+.main-content .detail-box .title-area .right-area {
+  height: 80%;
+  padding: 10px;
+}
+
+.main-content .detail-box .title-area .bottom-area {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  height: 20%;
+  border: solid 1px #fff;
 }
 
 /*
-  左のコンテンツ
+  サイドコンテンツ
  */
 .side-content {
-  padding: 20px !important;
+  height: 100vh;
+  border: solid 1px #fff;
   font-size: 3em;
-  border: solid 3px #fff;
-  height: 100%;
+  padding: 20px !important;
 }
 
 .side-content ul.category-list li {

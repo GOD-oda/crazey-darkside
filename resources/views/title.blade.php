@@ -1,17 +1,21 @@
 @extends('layouts.master')
 
-@section('left-area')
-  <ul class="former-titles">
-    @foreach ($former_titles as $title)
-      <li>{{ $title }}</li>
-    @endforeach
-  </ul>
-@endsection
-
-@section('right-area')
-  <ul class="latter-titles">
-    @foreach ($latter_titles as $title)
-      <li>{{ $title }}</li>
-    @endforeach
-  </ul>
+@section('content')
+  <div class="title-area">
+    <div class="left-area">
+      <ul class="title-list">
+        @foreach ($former_titles as $title)
+          <li>{{ $title }}</li>
+        @endforeach
+      </ul>
+    </div>
+    <div class="right-area">
+      <ul class="title-list">
+        @foreach ($latter_titles as $title)
+          <li>{{ $title }}</li>
+        @endforeach
+      </ul>
+    </div>
+    <div class="bottom-area"></div>
+  </div>
 @endsection

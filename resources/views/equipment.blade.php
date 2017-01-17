@@ -12,6 +12,16 @@
   </div>
 @endsection
 
+@section('content')
+  <div class="equipment-area">
+    <ul class="equipment-list">
+      @foreach ($equipments as $equipment)
+        <li>{{ $equipment }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endsection
+
 @section('left-area')
   <ul class="equipments-list">
     @foreach ($equipments as $equipment)
