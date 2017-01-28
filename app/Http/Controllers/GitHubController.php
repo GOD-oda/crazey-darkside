@@ -7,6 +7,11 @@ use GitHub;
 
 class GitHubController extends Controller
 {
+    public function index()
+    {
+        return view('index');
+    }
+
     public function status()
     {
         $user_information = GitHub::me()->show();

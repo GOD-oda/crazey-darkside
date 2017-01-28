@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>GITHUB SOUL</title>
 
+  <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/materialize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
